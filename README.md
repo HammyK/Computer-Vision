@@ -1,4 +1,3 @@
-## Overview
 This repository contains code and resources related to a computer vision project focusing on facial expression recognition (FER) using various techniques. The project includes the implementation of Convolutional Neural Networks (CNN), Histogram of Oriented Gradients (HOG) with Support Vector Machines (SVM), and Scale-Invariant Feature Transform (SIFT) with SVM for FER. Additionally, a test function for evaluating model performance and a video recognition demo are provided.
 
 ### Files Included
@@ -27,7 +26,6 @@ Ensure that you have the necessary libraries and packages installed to run the p
 ----
 
 ## Computer Vision Report
-### Data
 The project revolves around facial emotion detection using a dataset comprising 12,271 training images and 3,068 test images. These images depict faces categorized into seven emotion labels: surprise, fear, disgust, happiness, sadness, anger, and neutral. To ensure uniformity, all images have been scaled to 100x100 pixels. Data cleaning involved removing the 'Aligned' word from file names. The images were paired with their corresponding labels using the Pandas library in Python. However, it's worth noting that the dataset suffers from class imbalance, with label 4 (happiness) being predominant.
 
 ### Implemented Methods
