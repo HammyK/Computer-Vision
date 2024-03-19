@@ -1,3 +1,4 @@
+## Overview
 This repository contains code and resources related to a computer vision project focusing on facial expression recognition (FER) using various techniques. The project includes the implementation of Convolutional Neural Networks (CNN), Histogram of Oriented Gradients (HOG) with Support Vector Machines (SVM), and Scale-Invariant Feature Transform (SIFT) with SVM for FER. Additionally, a test function for evaluating model performance and a video recognition demo are provided.
 
 ### Files Included
