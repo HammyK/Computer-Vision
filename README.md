@@ -30,27 +30,27 @@ Ensure that you have the necessary libraries and packages installed to run the p
 The project revolves around facial emotion detection using a dataset comprising 12,271 training images and 3,068 test images. These images depict faces categorized into seven emotion labels: surprise, fear, disgust, happiness, sadness, anger, and neutral. To ensure uniformity, all images have been scaled to 100x100 pixels. Data cleaning involved removing the 'Aligned' word from file names. The images were paired with their corresponding labels using the Pandas library in Python. However, it's worth noting that the dataset suffers from class imbalance, with label 4 (happiness) being predominant.
 
 ### Implemented Methods
-#### Classifiers
+- #### Classifiers
 - **Support Vector Machines (SVM):** Utilized for its ability to handle multi-classification problems, SVM was combined with two feature descriptors: Histogram of Oriented Gradients (HOGS) and Scale-Invariant Feature Transform (SIFT). SVM constructs a hyperplane to differentiate between classes in the feature space.
 - **Convolutional Neural Network (CNN):** A deep neural network architecture specifically tailored for image-related tasks. CNN automatically extracts features from images through convolutional and pooling layers, followed by classification layers.
 
-#### Feature Extractors
+- #### Feature Extractors
 - **SIFT (Scale-Invariant Feature Transform):** Chosen for its ability to provide distinctive and invariant features across different scales and orientations in images. Implemented using OpenCV, SIFT features were combined with SVM for classification.
 - **HOGS (Histograms of Oriented Gradients):** A descriptor that captures the distribution of intensity gradients in images, commonly used for object detection. Implemented using Scikit Image, HOGS features were also combined with SVM for classification.
 
-#### In the Wild Video Recognition
+- #### In the Wild Video Recognition
 To apply the best performing model to real-world scenarios, we developed a pipeline for facial emotion recognition in videos. This involved pre-processing the video data, performing face detection using Haar Cascade, and subsequently applying the chosen classification model.
 
 ### Results
-- **Accuracy and Time Comparison:**
+- **Accuracy and Time Comparison**
   - SVM + HOGS achieved an accuracy of 0.62 in 31 seconds
   - SVM + SIFT achieved an accuracy of 0.39 in 718 seconds
   - CNN achieved the highest accuracy of 0.76 with a training time of 810 seconds
-- **Discussion:**
+- **Discussion**
   - SVM with HOGS outperformed SVM with SIFT and achieved competitive results compared to CNN
   - CNN exhibited high accuracy but required more computational resources
   - Overfitting was observed in SVM models due to the dominance of the 'happiness' class
-- **Video Recognition:**
+- **Video Recognition**
   - The CNN model applied to the video accurately recognized facial emotions, albeit with occasional misclassifications, especially in crowded scenes
 
 ### Future Work
